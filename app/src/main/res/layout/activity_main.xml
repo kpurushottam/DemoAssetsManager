@@ -29,4 +29,19 @@
         android:layout_height="wrap_content"
         android:text="Add Flower"
         android:onClick="addFlower"/>
+
+
+    <Button
+        android:id="@+id/btn_load_driver"
+        android:layout_below="@id/btn_add_flower"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Load Driver"
+        android:onClick="loadDriver"/>
+
+    <TextView
+        android:id="@+id/tv_driver"
+        android:layout_below="@id/btn_load_driver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 </RelativeLayout>

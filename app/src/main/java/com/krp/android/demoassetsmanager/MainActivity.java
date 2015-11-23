@@ -10,8 +10,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.Locale;
+import java.util.ResourceBundle;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -33,5 +37,16 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
             ivFlower.setBackgroundColor(Color.BLUE);
         }
+    }
+
+    public void loadDriver(View v) {
+        TextView tvDriver = (TextView) findViewById(R.id.tv_driver);
+        String driver, user, password;
+
+        ResourceBundle bd = ResourceBundle.getBundle("assets/properties/db", Locale.US);
+        driver = bd.getString("driver");
+        user = bd.getString("user");
+        password = bd.getString("password");
+        tvDriver.setText("Driver: "+driver+"\nUser: "+user+"\nPassword: "+password);
     }
 }
